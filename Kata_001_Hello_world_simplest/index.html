@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+    <script src="node_modules/mithril/mithril.js"></script>
+</head>
+<body>
+    <h1>Mithril</h1>
+    <app-right-here></app-right-here>
+
+    <script>
+
+        var Example = {
+            view: function (vnode) {
+                return m("div", "Hello simple 1")
+            }
+        }
+
+        var placeholderId = document.querySelector('app-right-here');
+        m.render(placeholderId, m(Example))
+
+    </script>
+</body>

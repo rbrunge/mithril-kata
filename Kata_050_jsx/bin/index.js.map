@@ -1,0 +1,1 @@
+{"version":3,"sources":["../src/index.js"],"names":["m","mount","document","body","MyComponent"],"mappings":";;AAAA;;;;AACA;;;;;;AAEAA,kBAAEC,KAAF,CAAQC,SAASC,IAAjB,EAAuBC,qBAAvB","file":"index.js","sourcesContent":["import m from \"mithril\";\r\nimport MyComponent from './MyComponent'\r\n\r\nm.mount(document.body, MyComponent);"]}

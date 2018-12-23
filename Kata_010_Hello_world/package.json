@@ -1,0 +1,12 @@
+{
+    "scripts": {
+        "start": "webpack src/index.js --output bin/app.js -d --watch"
+    },
+    "devDependencies": {
+        "browser-sync": "^2.26.3",
+        "browser-sync-webpack-plugin": "^2.2.2",
+        "mithril": "^1.1.6",
+        "webpack": "^4.28.1",
+        "webpack-cli": "^3.1.2"
+    }
+}
