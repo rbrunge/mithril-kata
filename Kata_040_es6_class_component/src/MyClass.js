@@ -13,8 +13,10 @@ export default class MyClass {
     }
 
     view(vnode) {
-        return (
-            m("h1", `Mithril class example ${this.method} -- ${this.variable1}`)
-        );
+        return [
+            m("h1", `Mithril class example`),
+            m("p", `Variable: ${this.variable1}`),
+            m("p", `Mithril Method: ${this.method}`)
+        ];
     }
 }
