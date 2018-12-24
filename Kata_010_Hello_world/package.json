@@ -1,6 +1,6 @@
 {
     "scripts": {
-        "start": "webpack src/index.js --output bin/app.js -d --watch"
+        "start": "webpack -d --watch"
     },
     "devDependencies": {
         "browser-sync": "^2.26.3",

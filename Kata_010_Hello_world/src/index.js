@@ -3,7 +3,10 @@ import m from "mithril";
 
 var Example = {
     view: function(vnode) {
-        return m("div", "Hello simple 1")
+        return [
+            m("h1", "Hello Webpack."),
+            m("p", "Simple example with component in separate file and webpack is used for packing it up.")
+        ]
     }
 }
 

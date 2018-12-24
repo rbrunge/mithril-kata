@@ -4,7 +4,7 @@ const path = require('path')
 module.exports = {
     entry: './src/index.js',
     output: {
-        path: path.resolve(__dirname, './src/bin'),
+        path: path.resolve(__dirname, './bin'),
         filename: 'app.js',
     },
     plugins: [
