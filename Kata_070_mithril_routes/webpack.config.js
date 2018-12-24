@@ -4,7 +4,7 @@ const path = require('path')
 module.exports = {
     entry: './src/index.js',
     output: {
-        path: path.resolve(__dirname, './src/bin'),
+        path: path.resolve(__dirname, './bin'),
         filename: 'app.js',
     },
     module: {
@@ -24,7 +24,7 @@ module.exports = {
             // ./public directory is being served
             host: 'localhost',
             port: 3000,
-            server: { baseDir: ['src'] }
+            server: { baseDir: ['.'] }
         })
     ]
 }
