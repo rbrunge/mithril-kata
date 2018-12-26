@@ -1,5 +1,5 @@
 import m from 'mithril';
-import FormUI from './FormTest';
+import LoginFormUi from './LoginFormUi';
 
-m.mount(document.querySelector("app-entry-point"), FormUI)
+m.mount(document.querySelector("app-entry-point"), LoginFormUi)
 
