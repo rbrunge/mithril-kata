@@ -6,6 +6,8 @@ To try these katas out clone repository to a folder on your local machine. In co
 - *npm install* -- to install package dependecies
 - *npm start* -- to run code
 
+In windows somthing like `C:\code\mithril-kata\kata_090_partial_views>npm start`
+
 Most (if not all) of the samples will open an html-page in browser-sync. Again, most of the samples use webpack.
 
 The samples in this repositories rely heavyli on the following packages:
