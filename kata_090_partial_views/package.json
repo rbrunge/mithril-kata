@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "mithril": "^1.1.6"
+    "mithril": "^1.1.7"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
@@ -19,7 +19,7 @@
     "@babel/preset-env": "^7.2.3",
     "babel-loader": "^8.0.4",
     "babel-plugin-transform-react-jsx": "^6.24.1",
-    "browser-sync": "^2.26.3",
+    "browser-sync": "^2.27.4",
     "browser-sync-webpack-plugin": "^2.2.2",
     "browsersync": "0.0.1-security",
     "webpack": "^4.28.2",
