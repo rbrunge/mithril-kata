@@ -1,6 +1,5 @@
 import * as m from 'mithril';
 
-
 export default class MyClassJsx {
 
      view(vnodes: any) {

@@ -1,4 +1,4 @@
-import * as m from "mithril";
+import * as m from "mithril"
 import MyClass from './MyClass'
 import MyClassJsx from './MyClassJsx'
 
