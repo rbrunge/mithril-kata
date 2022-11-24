@@ -1,0 +1,21 @@
+{
+  "plugins": 
+  [
+    "@babel/syntax-dynamic-import",
+    [
+      "@babel/plugin-transform-react-jsx",
+      {
+          "pragma": "m",
+          "pragmaFrag": "'['"
+      }
+  ]
+],
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "modules": false
+      }
+    ]
+  ]
+}
