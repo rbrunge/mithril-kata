@@ -3,7 +3,7 @@ import * as services from './services';
 
 var ServiceEnum = Object.freeze({
     None: 0,
-    Country: 1,
+    EmployeeService: 1,
 });
 
 export class MainView {
@@ -38,8 +38,8 @@ class Sidebar {
             <div class="box sidebar">
                 <ul>
                     <li><button onclick={e => {
-                        vnode.state.model.currentService = ServiceEnum.Country;
-                    }}>Country</button></li>
+                        vnode.state.model.currentService = ServiceEnum.EmployeeService;
+                    }}>Employee</button></li>
                 </ul>
             </div>
             
@@ -52,50 +52,50 @@ class ContentView {
     view(vnode) {
         return [
             <div class="box content">
-                {vnode.attrs.currentService == ServiceEnum.Country ? <CountryView></CountryView> : null}
+                {vnode.attrs.currentService == ServiceEnum.EmployeeService ? <EmployeeView></EmployeeView> : null}
             </div>
         ];
     }
 }
 
-class CountryView {
+class EmployeeView {
     oninit(vnode) {
-        this.countryCode = "dk";
-        this.country = null;
+        this.employeeId = "1";
+        this.employee = null;
         this.showResult = false;
     }
 
     view() {
         return [
             <div>
-                <label>Type country code, e.g. dk, no, us, en
+                <label>Type employee number, e.g. 1, 2, 3 ...
                     <input 
-                        value={this.countryCode}
-                        oninput={e => this.countryCode = e.target.value} 
+                        value={this.employeeId}
+                        oninput={e => this.employeeId = e.target.value} 
                         onkeypress={e => this.inputChanged()}
                     ></input>
                 </label>
-                <button onclick={e => this.getCountryInfo()}>Send</button>
+                <button onclick={e => this.getEmployeeInfo()}>Send</button>
                 {this.showResult ? this.resultView() : ""}
             </div>
         ];
     }
 
     inputChanged() {
-        if (event && event.keyCode === 13 && this.countryCode !== 'undefined' && this.countryCode != null && this.countryCode.length >= 2) {
-            this.getCountryInfo();
+        if (event && event.keyCode === 13 && this.employeeId !== 'undefined' && this.employeeId != null && this.employeeId.length >= 1) {
+            this.getEmployeeInfo();
         }
     }
 
-    getCountryInfo() {
-        let countryService = new services.CountryService();
-        let promise = countryService.getInfo(this.countryCode);
+    getEmployeeInfo() {
+        let service = new services.EmployeeService();
+        let promise = service.getInfo(this.employeeId);
 
         promise
             .then(d => {
-                this.country = d;
+                this.employee = d;
             })
-            .then(e => this.showResult = this.country !== 'undefined' || this.country != null)
+            .then(e => this.showResult = this.employee !== 'undefined' || this.employee != null)
             .catch(error => {
                 // console.log(error);
             });
@@ -106,16 +106,13 @@ class CountryView {
             <h2>Result:</h2>
             ,
             <div>
-                {this.country.map(value => {
-                    if (value != null)
-                        return (
-                            <ul>
-                                <li>Name: <strong>{value.name}</strong></li>
-                                <li>Capital: <strong>{value.capital}</strong></li>
-                                <li>Population: <strong>{value.population}</strong></li>
-                            </ul>
-                        )       
-                })}
+                {this?.employee?.data != null ?
+                    <ul>
+                        <li>Name: <strong>{this.employee.data.employee_name}</strong></li>
+                        <li>Age: <strong>{this.employee.data.employee_age}</strong></li>
+                        <li>Salary: <strong>{this.employee.data.employee_salary}</strong></li>
+                    </ul>
+                     : ""}
             </div>
         ]
     }

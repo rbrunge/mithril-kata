@@ -1,18 +1,15 @@
 import m from 'mithril';
 
-export class CountryService {
+export class EmployeeService {
 
-    getInfo(countryCode) {
+    getInfo(employeeId) {
         return m.request({
-            method: "GET",
-            url: "https://restcountries.eu/rest/v2/alpha",
-            data: {
-                codes: countryCode
-            }
-        })
-        // .then(result => {
-        //     console.log(result)
-        // })      
+                method: "GET",
+                url: "https://dummy.restapiexample.com/api/v1/employee/" + employeeId,
+            })
+            // .then(result => {
+            //     console.log(result)
+            // })
     }
 
 }
