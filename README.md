@@ -1,6 +1,7 @@
 # mithril-kata
 
-Mithril version used: 1.1.6
+Upgrading repo from using mithril ver 1.1.6 to 2.2.0
+Mithril version used: 2.2.0
 
 To try these katas out clone repository to a folder on your local machine. In command line interface go into the folder of the feature you want to test and type
 - *npm install* -- to install package dependecies
@@ -18,7 +19,7 @@ The samples in this repositories heavily relies on the following packages:
 *Current Versions:*
 - node: v18.10.0
 - webpack: @5.0.0
-- Mithril: 1.1.6
+- Mithril: 2.2.0
 
 ## History
 

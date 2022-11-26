@@ -1,21 +1,25 @@
 <!DOCTYPE html>
+
 <head>
+    <title>Kata_001_Hello_world_simplest</title>
     <script src="node_modules/mithril/mithril.js"></script>
 </head>
+
 <body>
     <h1>Mithril</h1>
     <app-right-here></app-right-here>
 
     <script>
-
         var Example = {
-            view: function (vnode) {
-                return m("div", "Hello simple 1")
+            view: function(vnode) {
+                return [
+                    m("div", "Hello simple 1"),
+                    m("p", "This is Mithril version 2.2.0"),
+                ]
             }
         }
 
         var placeholderId = document.querySelector('app-right-here');
         m.render(placeholderId, m(Example))
-
     </script>
 </body>
